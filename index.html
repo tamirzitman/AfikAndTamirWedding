@@ -1,61 +1,122 @@
-﻿<!DOCTYPE html>
+﻿<!-- hide gifts section using parameter in the url: ?mode=photos -->
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>חתונה של אפיק וטמיר</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Arial", sans-serif;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-        background-color: #f9f9f9;
-        direction: rtl;
-      }
-      h1 {
-        color: #333;
-        margin-bottom: 30px;
-      }
-      .link-container {
-        margin: 40px 0;
-      }
-      .button {
-        display: inline-block;
-        padding: 12px 24px;
-        margin: 10px;
-        background-color: #4caf50;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        font-size: 18px;
-        transition: background-color 0.3s;
-      }
-      .button:hover {
-        background-color: #45a049;
-      }
-    </style>
+    <title>החתונה של אפיק וטמיר</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <h1>החתונה של אפיק וטמיר</h1>
-
-    <div class="link-container">
-      <h2>תמונות מהחתונה</h2>
-      <a href="הקישור_לאלבום_בגוגל_פוטוס" class="button"
-        >צפייה באלבום התמונות</a
-      >
+    <div class="hero">
+      <h1>אפיק וטמיר</h1>
+      <p class="date">23.06.2024</p>
+      <a href="#photos" class="button google-photos">
+        לאלבום המשותף
+        <img
+          class="img_in_button"
+          src="images/google_photos.png"
+          alt="Google Photos"
+        />
+      </a>
     </div>
 
-    <div class="link-container">
-      <h2>משאב 2</h2>
-      <a href="הקישור_השני" class="button">צפייה במשאב 2</a>
-    </div>
+    <section id="gifts" class="section">
+      <div class="container">
+        <h2>מתנות</h2>
+        <p>
+          שמחים ומעריכים שבאתם לחגוג איתנו ביום הזה.<br />אם אתם מעוניינים
+          להעניק לנו מתנה, תוכלו לעשות זאת כאן:
+        </p>
 
-    <div class="link-container">
-      <h2>משאב 3</h2>
-      <a href="הקישור_השלישי" class="button">צפייה במשאב 3</a>
-    </div>
+        <div class="gift-options">
+          <div class="gift-option">
+            <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>מתנה בפייבוקס</h3>
+            <p>העברה מהירה וקלה דרך אפליקציית פייבוקס</p>
+            <a
+              href="https://www.payboxapp.com/l/wedding-afik-tamir"
+              class="button paybox"
+            >
+              למתנה בפייבוקס
+              <img
+                class="img_in_button"
+                src="/images/paybox.png"
+                alt="PayBox"
+              />
+            </a>
+          </div>
+
+          <div class="gift-option">
+            <div class="icon">
+              <i class="far fa-credit-card"></i>
+            </div>
+            <h3>מתנה באשראי</h3>
+            <p>תשלום מאובטח באמצעות כרטיס אשראי</p>
+            <a
+              href="https://secured-payment.com/wedding-afik-tamir"
+              class="button"
+            >
+              למתנה באשראי
+              <i class="far fa-credit-card" style="margin-right: 8px"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos" class="section">
+      <div class="container">
+        <h2>רגעים יפים</h2>
+        <p>הזיכרונות שלנו ביחד</p>
+
+        <div class="gallery">
+          <div class="gallery-img">
+            <img src="images/us1" alt="תמונה שלנו 1" />
+          </div>
+          <div class="gallery-img">
+            <img src="images/us2" alt="תמונה שלנו 2" />
+          </div>
+          <div class="gallery-img">
+            <img src="images/us3" alt="תמונה שלנו 3" />
+          </div>
+          <div class="gallery-img">
+            <img src="images/us4" alt="תמונה שלנו 4" />
+          </div>
+        </div>
+
+        <a
+          href="https://photos.google.com/album/AF1QipNxVfFbEQpCdWzlEo2nFrFkpzaOFWn8-oOVj9kT"
+          class="button"
+          style="display: inline-flex; align-items: center; gap: 10px"
+        >
+          אלבום התמונות המלא
+        </a>
+      </div>
+    </section>
+
+    <section id="thanks" class="section">
+      <div class="container">
+        <h2>תודה</h2>
+        <p>
+          תודה מקרב לב על שהייתם חלק מהיום המשמח והמרגש שלנו.<br />אנו מעריכים
+          את אהבתכם ותמיכתכם.
+        </p>
+        <p style="font-size: 1.5rem; margin-top: 20px">
+          אפיק וטמיר <i class="fas fa-heart heart"></i>
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 - החתונה של אפיק וטמיר</p>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
