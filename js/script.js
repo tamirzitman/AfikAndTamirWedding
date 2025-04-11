@@ -6,6 +6,11 @@ if (mode === "photos") {
   if (giftsSection) {
     giftsSection.style.display = "none";
   }
+  // Hide gift icon from top buttons too
+  const giftIcon = document.getElementById("gift-icon");
+  if (giftIcon) {
+    giftIcon.style.display = "none";
+  }
 }
 
 const galleryContainer = document.getElementById("random-gallery");
