@@ -14,14 +14,16 @@ if (mode === "photos") {
 }
 
 document.getElementById("share-icon").addEventListener("click", async () => {
+  const cleanUrl = window.location.origin + window.location.pathname;
+
   if (navigator.share) {
     await navigator.share({
       title: document.title,
-      url: window.location.href,
+      url: cleanUrl,
     });
   } else {
     // fallback
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(cleanUrl);
     alert("Link copied to clipboard!");
   }
 });
