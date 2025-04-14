@@ -13,6 +13,19 @@ if (mode === "photos") {
   }
 }
 
+document.getElementById("share-icon").addEventListener("click", async () => {
+  if (navigator.share) {
+    await navigator.share({
+      title: document.title,
+      url: window.location.href,
+    });
+  } else {
+    // fallback
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied to clipboard!");
+  }
+});
+
 const galleryContainer = document.getElementById("random-gallery");
 const galleryPath = "assets/gallery/";
 
@@ -46,13 +59,30 @@ const imageFiles = [
   "6026030539141662820.jpg",
   "6026030539141662821.jpg",
 ];
-// Shuffle and select 4
-const shuffled = imageFiles.sort(() => 0.5 - Math.random()).slice(0, 6);
 
-// Add them to the DOM
-shuffled.forEach((filename) => {
-  const div = document.createElement("div");
-  div.className = "gallery-img";
-  div.innerHTML = `<img src="${galleryPath}${filename}" alt="תמונה שלנו" />`;
-  galleryContainer.appendChild(div);
-});
+function shuffleImages() {
+  // Clear current images with a fade-out
+  const images = document.querySelectorAll(".gallery-img");
+  images.forEach((img) => {
+    img.classList.add("fade-out");
+  });
+
+  // After fade-out, shuffle and replace
+  setTimeout(() => {
+    galleryContainer.innerHTML = ""; // clear existing
+
+    const shuffled = imageFiles.sort(() => 0.5 - Math.random()).slice(0, 6);
+    shuffled.forEach((filename) => {
+      const div = document.createElement("div");
+      div.className = "gallery-img fade-in";
+      div.innerHTML = `<img src="${galleryPath}${filename}" alt="תמונה שלנו" />`;
+      galleryContainer.appendChild(div);
+    });
+  }, 500); // match fade-out duration
+}
+
+// Initial render
+shuffleImages();
+
+// Repeat every X seconds
+setInterval(shuffleImages, 5000);

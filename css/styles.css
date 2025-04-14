@@ -74,6 +74,7 @@ body {
     transform: translateX(-50%) translateY(-5px);
   }
 }
+
 .hero-buttons {
   position: absolute;
   bottom: 20px;
@@ -99,14 +100,20 @@ body {
 
 .hero-button img,
 .hero-button i {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 
 .hero-button:hover {
   transform: scale(1.1);
 }
 
+.share-button-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px; /* Different corner */
+  z-index: 10;
+}
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -168,6 +175,26 @@ h2 {
 /* .button.paybox {
   background-color: var(--paybox-blue);
 } */
+
+.gallery-img {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-img.fade-out {
+  opacity: 0;
+}
+
+.gallery-img.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 .gallery {
   display: grid;
