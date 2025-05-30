@@ -12,9 +12,9 @@
     "6026030539141662819.jpg", "6026030539141662820.jpg", "6026030539141662821.jpg",
   ],
   links: {
-    paybox: "https://www.payboxapp.com/l/wedding-afik-tamir",
-    wiwi: "https://wiwi.co.il/",
-    sharedAlbum: "https://photos.google.com/album/AF1QipNxVfFbEQpCdWzlEo2nFrFkpzaOFWn8-oOVj9kT"
+    paybox: "https://payboxapp.page.link/W9DitJpYJkBgFW137",
+    wiwi: "https://wiwi.gifts/KnVko3",
+    sharedAlbum: "https://photos.app.goo.gl/ctE7Vn4TSXdk5bAj9"
   },
   imageAssets: {
     googlePhotos: "images/google_photos.png",
