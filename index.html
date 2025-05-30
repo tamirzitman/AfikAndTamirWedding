@@ -1,0 +1,116 @@
+﻿<!-- hide gifts section using parameter in the url: ?mode=photos -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>החתונה של אפיק וטמיר</title>
+    <link rel="icon" type="image/png" href="images/favicon-ring.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <h1>אפיק וטמיר</h1>
+      <p class="date">23.06.2025</p>
+      <i class="fas fa-chevron-down bounce-arrow"></i>
+      <div class="hero-buttons">
+        <a
+          href="#shared-album"
+          class="hero-button"
+          id="photos-icon"
+          title="Shared Album"
+        >
+        <img class="icon-google-photos" src="" alt="Google Photos" />
+        </a>
+        <a href="#gifts" class="hero-button" id="gift-icon" title="Gifts">
+          <img src="" alt="Gift" />
+        </a>
+      </div>
+      <!-- Share button separately positioned -->
+      <div class="share-button-container">
+        <a class="hero-button" title="Share This Site" id="share-icon">
+          <img src="" alt="Share" />
+        </a>
+      </div>
+    </div>
+
+    <section id="gifts" class="section">
+      <div class="container">
+        <h2>מתנות</h2>
+        <p>
+          שמחים ומעריכים שבאתם לחגוג איתנו ביום הזה.<br />אם אתם מעוניינים
+          להעניק לנו מתנה, תוכלו לעשות זאת כאן:
+        </p>
+
+        <div class="gift-options">
+          <div class="gift-option">
+            <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>מתנה בפייבוקס</h3>
+            <p>העברה מהירה וקלה דרך אפליקציית פייבוקס</p>
+            <a href="#" class="button paybox" id="paybox-link">
+              <img class="img_in_button icon-paybox" src="" alt="PayBox" />
+            </a>
+          </div>
+
+          <div class="gift-option">
+            <div class="icon">
+              <i class="far fa-credit-card"></i>
+            </div>
+            <h3>מתנה באשראי</h3>
+            <p>תשלום מאובטח באמצעות כרטיס אשראי</p>
+            <a href="#" class="button" id="wiwi-link">
+              <img class="img_in_button icon-wiwi" src="" alt="WiWi" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shared-album" class="section">
+      <div class="container">
+        <h2>אלבום האירוע המשותף</h2>
+        <p>כאן תוכלו לשתף תמונות שלכם מהאירוע ולצפות בשלנו</p>
+        <a
+          href="#"
+          target="_blank"
+          class="button google-photos"
+          id="google-photos-link"
+        >
+          לאלבום האירוע המשותף
+          <img class="img_in_button icon-google-photos" src="" alt="Google Photos" />
+        </a>
+      </div>
+    </section>
+
+    <section id="photos" class="section">
+      <div class="container">
+        <h2>רגעים יפים</h2>
+        <div id="random-gallery" class="gallery"></div>
+      </div>
+    </section>
+
+    <section id="thanks" class="section">
+      <div class="container">
+        <h2>תודה</h2>
+        <p>
+          תודה מקרב לב על שהייתם חלק מהיום המשמח והמרגש שלנו.<br />אנו מעריכים
+          את אהבתכם ותמיכתכם.
+        </p>
+        <p style="font-size: 1.5rem; margin-top: 20px">
+          אפיק וטמיר <i class="fas fa-heart heart"></i>
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 - החתונה של אפיק וטמיר</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
