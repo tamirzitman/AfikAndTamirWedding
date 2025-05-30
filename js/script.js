@@ -37,6 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
+  const weddingEndDate = new Date("2025-06-24T09:00:00+03:00");
+  const now = new Date();
+  
+  if (now >= weddingEndDate) {
+    const albumSection = document.getElementById("shared-album");
+    const giftsSection = document.getElementById("gifts");
+
+    if (albumSection && giftsSection && albumSection.parentNode) {
+      // Move gifts section right after the album section
+      albumSection.parentNode.insertBefore(giftsSection, albumSection.nextSibling);
+    }
+    // Hide gift icon from top buttons
+    const giftIcon = document.getElementById("gift-icon");
+    if (giftIcon) {
+      giftIcon.style.display = "none";
+    }
+  }
+
   // Set links
   document.getElementById("paybox-link").href = config.links.paybox;
   document.getElementById("wiwi-link").href = config.links.wiwi;
@@ -56,22 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#gift-icon img").src = config.imageAssets.giftIcon;
 });
 
-const urlParams = new URLSearchParams(window.location.search);
-const mode = urlParams.get("mode");
-
-
-
-if (mode === "photos") {
-  const giftsSection = document.getElementById("gifts");
-  if (giftsSection) {
-    giftsSection.style.display = "none";
-  }
-  // Hide gift icon from top buttons too
-  const giftIcon = document.getElementById("gift-icon");
-  if (giftIcon) {
-    giftIcon.style.display = "none";
-  }
-}
 
 document.getElementById("share-icon").addEventListener("click", async () => {
   const cleanUrl = window.location.origin + window.location.pathname;
