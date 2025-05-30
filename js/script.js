@@ -1,4 +1,5 @@
 ﻿const config = {
+  weddingEndDate: "2025-06-24T09:00:00+03:00", // YYYY-MM-DDTHH:mm:ss+TZD format
   galleryPath: "assets/gallery/",
   imageFiles: [
     "6026030539141662795.jpg", "6026030539141662796.jpg", "6026030539141662797.jpg",
@@ -37,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 
-  const weddingEndDate = new Date("2025-06-24T09:00:00+03:00");
+  const weddingEndDate = new Date(config.weddingEndDate);
   const now = new Date();
-  
+
   if (now >= weddingEndDate) {
     const albumSection = document.getElementById("shared-album");
     const giftsSection = document.getElementById("gifts");
