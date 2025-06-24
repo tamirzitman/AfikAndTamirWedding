@@ -1,5 +1,5 @@
 ﻿const config = {
-  weddingEndDate: "2025-06-24T09:00:00+03:00", // YYYY-MM-DDTHH:mm:ss+TZD format
+  weddingEndDate: "2025-07-25T21:00:00+03:00", // YYYY-MM-DDTHH:mm:ss+TZD format
   galleryPath: "assets/gallery/",
   imageFiles: [
     "6026030539141662795.jpg", "6026030539141662796.jpg", "6026030539141662797.jpg",
