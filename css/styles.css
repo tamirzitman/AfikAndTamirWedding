@@ -1,4 +1,7 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Amatic+SC:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --primary-color: #80ced7;
@@ -49,6 +52,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
+
 .bounce-arrow {
   animation: bounce 2s infinite;
   position: absolute;
@@ -56,10 +60,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
-  color: white; /* or any color that matches your design */
+  color: white;
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -67,9 +72,11 @@ body {
   100% {
     transform: translateX(-50%) translateY(0);
   }
+
   40% {
     transform: translateX(-50%) translateY(-10px);
   }
+
   60% {
     transform: translateX(-50%) translateY(-5px);
   }
@@ -111,13 +118,15 @@ body {
 .share-button-container {
   position: absolute;
   bottom: 20px;
-  right: 20px; /* Different corner */
+  right: 20px;
+  /* Different corner */
   z-index: 10;
 }
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -129,7 +138,7 @@ h2 {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 10px 0;
   background-color: var(--light-color);
 }
 
@@ -276,9 +285,11 @@ h2 {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }

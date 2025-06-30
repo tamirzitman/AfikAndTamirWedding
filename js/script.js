@@ -13,7 +13,8 @@
     "6026030539141662819.jpg", "6026030539141662820.jpg", "6026030539141662821.jpg",
   ],
   links: {
-    paybox: "https://payboxapp.page.link/W9DitJpYJkBgFW137",
+    paybox1: "https://payboxapp.page.link/W9DitJpYJkBgFW137",
+    paybox2: "https://payboxapp.page.link/eWvPHUQsiySq9vm56",
     wiwi: "https://wiwi.gifts/KnVko3",
     sharedAlbum: "https://photos.app.goo.gl/ctE7Vn4TSXdk5bAj9"
   },
@@ -55,9 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
       giftIcon.style.display = "none";
     }
   }
+  // Pick randomly between paybox1 and paybox2
+  const randomPaybox = Math.random() < 0.5 ? config.links.paybox1 : config.links.paybox2;
 
   // Set links
-  document.getElementById("paybox-link").href = config.links.paybox;
+  document.getElementById("paybox-link").href = randomPaybox;
   document.getElementById("wiwi-link").href = config.links.wiwi;
   document.getElementById("google-photos-link").href = config.links.sharedAlbum;
 
