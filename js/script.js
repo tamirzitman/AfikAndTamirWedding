@@ -20,6 +20,7 @@
   },
   imageAssets: {
     googlePhotos: "images/google_photos.png",
+    foodIcon: "images/food.jpg",
     giftIcon: "images/gift_img.png",
     shareIcon: "images/share.png",
     payboxIcon: "images/paybox.png",
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   document.querySelector("#share-icon img").src = config.imageAssets.shareIcon;
   document.querySelector("#gift-icon img").src = config.imageAssets.giftIcon;
+  document.querySelector("#food-icon img").src = config.imageAssets.foodIcon;
 });
 
 
@@ -92,6 +94,30 @@ document.getElementById("share-icon").addEventListener("click", async () => {
     navigator.clipboard.writeText(cleanUrl);
     alert("Link copied to clipboard!");
   }
+});
+
+// Add smooth scroll behavior for food & drinks button
+document.getElementById("food-icon").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("food-drinks").scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+// Add smooth scroll behavior for gifts button
+document.getElementById("gift-icon").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("gifts").scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+
+// Add smooth scroll behavior for photos button
+document.getElementById("photos-icon").addEventListener("click", (e) => {
+  e.preventDefault();
+  document.getElementById("shared-album").scrollIntoView({
+    behavior: 'smooth'
+  });
 });
 
 const galleryContainer = document.getElementById("random-gallery");
@@ -112,7 +138,7 @@ function shuffleImages() {
     const shuffled = imageFiles.sort(() => 0.5 - Math.random()).slice(0, 6);
     shuffled.forEach((filename) => {
       const div = document.createElement("div");
-      div.className = "gallery-img fade-in";
+      div.className = "gallery-img fade-in clickable-image";
       div.innerHTML = `<img src="${config.galleryPath}${filename}" alt="תמונה שלנו" />`;
       galleryContainer.appendChild(div);
     });
@@ -124,3 +150,43 @@ shuffleImages();
 
 // Repeat every X seconds
 setInterval(shuffleImages, 5000);
+
+// Image Modal functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const modalCaption = document.getElementById("modalCaption");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  // Add click event to all clickable images
+  document.querySelectorAll(".clickable-image").forEach(img => {
+    img.addEventListener("click", function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalCaption.innerHTML = this.alt;
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+    });
+  });
+
+  // Close modal when clicking the X
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Restore scrolling
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto"; // Restore scrolling
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && modal.style.display === "block") {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto"; // Restore scrolling
+    }
+  });
+});

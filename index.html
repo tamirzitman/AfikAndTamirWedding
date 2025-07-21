@@ -18,12 +18,15 @@
 
     <br />
     <p class="date">25.7.25</p>
-    <a href="#gifts" class="scroll-down">
+    <a href="#food-drinks" class="scroll-down">
       <i class="fas fa-chevron-down bounce-arrow"></i>
     </a>
     <div class="hero-buttons">
       <a href="#shared-album" class="hero-button" id="photos-icon" title="Shared Album">
         <img class="icon-google-photos" src="" alt="Google Photos" />
+      </a>
+      <a href="#food-drinks" class="hero-button" id="food-icon" title="Food & Drinks">
+        <img src="" alt="Food & Drinks" />
       </a>
       <a href="#gifts" class="hero-button" id="gift-icon" title="Gifts">
         <img src="" alt="Gift" />
@@ -81,6 +84,90 @@
     </div>
   </section>
 
+  <section id="food-drinks" class="section">
+    <div class="container">
+      <h2>אוכל ושתייה</h2>
+      <p>
+        בחתונה שלנו תוכלו ליהנות ממגוון רחב של מנות טעימות ומשקאות מרעננים
+      </p>
+
+
+
+      <div class="drinks-section">
+        <h3>מה שותים?</h3>
+        <p style="margin-bottom: 30px;">מגוון משקאות מיוחדים ומרעננים לאירוע</p>
+        <div class="drinks-gallery">
+          <div class="drink-item">
+            <div class="drink-image">
+              <i class="fas fa-cocktail drink-icon"></i>
+            </div>
+            <h4>קוקטיילים מיוחדים</h4>
+            <p>מגוון קוקטיילים מרעננים ליום שישי שמח במיוחד</p>
+            <div class="timing-notice">
+              <i class="far fa-clock"></i>
+              <span>זמין בקבלת פנים</span>
+            </div>
+          </div>
+
+          <div class="drink-item featured patron-special">
+            <div class="drink-image-gallery">
+              <img src="images/patron-frozen.jpg" alt="פטרון פרוזן יוגורט" class="patron-image clickable-image" />
+              <img src="images/patron-frozen2.jpg" alt="פטרון פרוזן יוגורט" class="patron-image clickable-image" />
+            </div>
+            <h4>פטרון פרוזן יוגורט</h4>
+            <p>פרוזן אייס מעולה, מרענן ומעט אלכוהולי - מושלם לקיץ!</p>
+            <div class="timing-notice">
+              <i class="far fa-clock"></i>
+              <span>זמין בקבלת פנים</span>
+            </div>
+            <span class="featured-badge">הכוכב שלנו!</span>
+          </div>
+          <div class="drink-item">
+            <div class="drink-image">
+              <i class="fas fa-glass-whiskey drink-icon"></i>
+            </div>
+            <h4>משקאות חריפים</h4>
+            <p>מבחר משקאות חריפים איכותיים לחובבי הטעמים החזקים</p>
+          </div>
+
+          <div class="drink-item">
+            <div class="drink-image">
+              <i class="fas fa-wine-glass drink-icon"></i>
+            </div>
+            <h4>יינות נבחרים</h4>
+            <p>מבחר יינות הבית - לבן ואדום לארוחה המושלמת</p>
+          </div>
+
+          <div class="drink-item">
+            <div class="drink-image">
+              <i class="fas fa-coffee drink-icon"></i>
+            </div>
+            <h4>קפה ותה</h4>
+            <p>משקאות חמים לאורך כל האירוע ועד סופו מחכים לכם בבית הקפה</p>
+          </div>
+
+          <div class="drink-item">
+            <div class="drink-image">
+              <i class="fas fa-tint drink-icon"></i>
+            </div>
+            <h4>משקאות קלים</h4>
+            <p>מים, מיצים טבעיים ומשקאות קלים מרעננים</p>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h3>מה אוכלים?</h3>
+        <div class="menu-image-container">
+          <img src="images/menu.png" alt="תפריט החתונה" class="menu-image clickable-image" />
+          <div class="image-hint">לחצו להגדלה</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="shared-album" class="section">
     <div class="container">
       <h2>אלבום האירוע המשותף</h2>
@@ -115,6 +202,14 @@
   <footer class="footer">
     <p>© 2025 - החתונה של אפיק וטמיר</p>
   </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-caption" id="modalCaption"></div>
+  </div>
+
   <script src="js/script.js"></script>
 </body>
 
